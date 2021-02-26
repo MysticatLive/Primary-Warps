@@ -96,7 +96,8 @@ public class WarpCommand implements CommandExecutor {
 	
 	private void warpList(Player p) {
 		if (!WarpPermissions.permissionToList(p)) p.sendMessage(responseInvalidPerms);
-		Warp.listAllWarps(p);
+		if (Main.warps.getFile().contains("warps")) Warp.listAllWarps(p);
+		else p.sendMessage(responseNoWarpsExist);
 	}
 	
 	private void warpUse(String name, Player p) {

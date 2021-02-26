@@ -71,13 +71,13 @@ public class Warp {
 				file.getString("warps." + name + ".item.meta.name")); //add lore
 		Utils.addItemNBTString(item, "warp-id", name);
 		
-		if (Main.warps.getFile().contains("warps." + name + ".item.enchantments")) {
+		if (file.contains("warps." + name + ".item.enchantments")) {
 			Objects.requireNonNull(file.getConfigurationSection("warps." + name + ".item.enchantments")).getKeys(false).forEach(e -> {
 				item.addUnsafeEnchantment(Objects.requireNonNull(Enchantment.getByKey(NamespacedKey.minecraft(e.toLowerCase()))), file.getInt("warps." + name + ".item.enchantments." + e));
 			});
 		}
 		
-		if (Main.warps.getFile().contains("warps." + name + ".item.lore")) {
+		if (file.contains("warps." + name + ".item.lore")) {
 			ArrayList<String> lore = new ArrayList<>();
 			ItemMeta meta = item.getItemMeta();
 			Objects.requireNonNull(file.getConfigurationSection("warps." + name + ".item.lore")).getKeys(false).forEach(s -> {
@@ -95,7 +95,10 @@ public class Warp {
 	}
 	
 	public static void removeWarp(String name) {
-		Main.warps.getFile().set("warps." + name, null);
+		FileConfiguration file = Main.warps.getFile();
+		file.set("warps." + name, null);
+		if ((int) Objects.requireNonNull(file.getConfigurationSection("warps")).getKeys(false).stream().count() == 0)
+			file.set("warps", null);
 		Main.warps.saveFile();
 	}
 	
