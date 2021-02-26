@@ -1,0 +1,11 @@
+name: PrimaryWarps
+version: 1.0
+api-version: 1.16
+author: Mysticat
+main: me.mysticat.primarywarps.Main
+description: Set a list of public warps for your players to use!
+
+commands:
+  warp:
+   aliases: [primarywarp, pwarp, pw]
+   description: Open the Warping GUI!
