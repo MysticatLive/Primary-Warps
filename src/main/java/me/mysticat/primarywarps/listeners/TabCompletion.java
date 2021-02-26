@@ -11,6 +11,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import me.mysticat.primarywarps.commands.WarpPermissions;
 
+//Command QOL
 public class TabCompletion implements TabCompleter, Listener {
 
 	@Override

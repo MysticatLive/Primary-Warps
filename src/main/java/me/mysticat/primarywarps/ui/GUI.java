@@ -13,6 +13,7 @@ import me.mysticat.primarywarps.utils.Warp;
 
 import java.util.Objects;
 
+//Warp Menu GUI handler
 public class GUI implements InventoryHolder {
 
 	@Override

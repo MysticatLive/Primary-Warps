@@ -10,6 +10,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import me.mysticat.primarywarps.Main;
 
+//File manager for config files
 public class DataManager {
 
 	private final Main plugin;

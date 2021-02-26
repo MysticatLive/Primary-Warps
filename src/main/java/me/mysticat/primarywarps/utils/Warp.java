@@ -14,6 +14,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import me.mysticat.primarywarps.Main;
 
+//Common use cases for the plugin regarding warps
 public class Warp {
 	
 	public static void createWarp(String name, Player p) {

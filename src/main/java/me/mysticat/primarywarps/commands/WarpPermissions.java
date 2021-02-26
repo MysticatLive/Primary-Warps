@@ -2,6 +2,7 @@ package me.mysticat.primarywarps.commands;
 
 import org.bukkit.entity.Player;
 
+//Permissions handler for warp command
 public class WarpPermissions {
 	
 	public static boolean permissionToMenu(Player p) {

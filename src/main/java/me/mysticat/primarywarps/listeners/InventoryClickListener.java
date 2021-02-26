@@ -6,6 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import me.mysticat.primarywarps.ui.GUI;
 
+//Warp menu management
 public class InventoryClickListener implements Listener {
 	
 	@EventHandler

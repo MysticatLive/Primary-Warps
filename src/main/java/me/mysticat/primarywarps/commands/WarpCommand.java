@@ -15,6 +15,7 @@ import me.mysticat.primarywarps.utils.Warp;
 
 public class WarpCommand implements CommandExecutor {
 
+	//Response Messages
 	private final String responseNoWarpsExist = Utils.color(Main.config.getFile().getString("messages.responseNoWarpsExist"));
 	private final String responseWarpDoesNotExist = Utils.color(Main.config.getFile().getString("messages.responseWarpDoesNotExist"));
 	private final String responseWarpCreated = Utils.color(Main.config.getFile().getString("messages.responseWarpCreated"));
@@ -30,7 +31,8 @@ public class WarpCommand implements CommandExecutor {
 	private final String responseLoreRemoved = Utils.color(Main.config.getFile().getString("messages.responseLoreRemoved"));
 	private final String responseLoreRemovedAll = Utils.color(Main.config.getFile().getString("messages.responseLoreRemovedAll"));
 	private final String responseLoreDoesNotExist = Utils.color(Main.config.getFile().getString("messages.responseLoreDoesNotExist"));
-	
+
+	//Master command for plugin
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (!(sender instanceof Player)) {
