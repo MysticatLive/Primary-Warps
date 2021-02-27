@@ -88,6 +88,10 @@ public class Warp {
 		}
 		return item;
 	}
+
+	public static String getWarpName(String name) {
+		return Main.warps.getFile().getString("warps." + name + ".item.meta.name");
+	}
 	
 	public static void setWarpName(String name, String newName) {
 		Main.warps.getFile().set("warps." + name + ".item.meta.name", newName);
@@ -112,7 +116,6 @@ public class Warp {
 				data.getDouble("warps." + name + ".x"),data.getDouble("warps." + name + ".y"), data.getDouble("warps." + name + ".z"), 
 				(float)data.getDouble("warps." + name + ".yaw"), (float)data.getDouble("warps." + name + ".pitch"));
 		p.teleport(dest);
-		p.sendMessage(Utils.color("&f[&b&lPW&f] You have been warped to &b&o" + name + "&f."));
 	}
 	
 	public static void listAllWarps(Player p) {

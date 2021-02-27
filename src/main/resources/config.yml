@@ -4,6 +4,7 @@ inv-menu:
 
 messages:
   pluginPrefix: '&f[&b&lPW&f]'
+  responseWarpUsed: 'You have been warped to &b&o<warp>&f.'
   responseNoWarpsExist: '&e&l(!) &eNo warps currently exist.'
   responseWarpDoesNotExist: '&e&l(!) &eNo warp named &b&o<warp> &eexists.'
   responseWarpCreated: 'Warp &b&o<warp> &fhas been created!'

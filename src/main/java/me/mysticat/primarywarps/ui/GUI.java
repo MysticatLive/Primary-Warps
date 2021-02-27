@@ -1,6 +1,7 @@
 package me.mysticat.primarywarps.ui;
 
 
+import me.mysticat.primarywarps.commands.WarpCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -38,7 +39,7 @@ public class GUI implements InventoryHolder {
 	}
 	
 	public static void clicked(Player p, ItemStack item) {
-		Warp.useWarp(Utils.getItemNBTString(item, "warp-id"), p);
+		WarpCommand.warpUse(Utils.getItemNBTString(item, "warp-id"), p);
 	}
 
 }

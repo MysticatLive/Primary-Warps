@@ -83,9 +83,10 @@ public class WarpCommand implements CommandExecutor {
 		else p.sendMessage(Main.responseNoWarpsExist);
 	}
 	
-	private void warpUse(String name, Player p) {
+	public static void warpUse(String name, Player p) {
 		if (!WarpPermissions.permissionToUse(name, p)) p.sendMessage(Main.responseInvalidPerms);
 		Warp.useWarp(name, p);
+		p.sendMessage(Main.responseWarpUsed.replace("<warp>", Warp.getWarpName(name)));
 	}
 	
 	private void warpCreate(String name, Player p) {

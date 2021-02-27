@@ -14,7 +14,7 @@ public class WarpPermissions {
 	}
 	
 	public static boolean permissionToUse(String name, Player p) {
-		return (!p.hasPermission("PrimaryWarps.use." + name) && !p.hasPermission("PrimaryWarps.use.*") && !p.hasPermission("PrimaryWarps.*"));
+		return (p.hasPermission("PrimaryWarps.use." + name) && p.hasPermission("PrimaryWarps.use.*") && p.hasPermission("PrimaryWarps.*"));
 	}
 	
 	public static boolean permissionToCreate(Player p) {

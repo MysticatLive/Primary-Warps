@@ -12,7 +12,7 @@ import me.mysticat.primarywarps.utils.Utils;
 
 public class Main extends JavaPlugin {
 
-	public static String internalPluginPrefix = "&f[&b&lPW&f] ", pluginPrefix, responseNoWarpsExist, responseWarpDoesNotExist,
+	public static String internalPluginPrefix = "&f[&b&lPW&f] ", pluginPrefix, responseWarpUsed, responseNoWarpsExist, responseWarpDoesNotExist,
 			responseWarpCreated, responseWarpAlreadyExists, responseWarpRemoved, responseWarpRenamed, responseWarpInvalidName,
 			responseItemUpdated, responseInvalidPerms, responseInvalidCmd, responseLoreAdded, responseLoreSet,
 			responseLoreRemoved, responseLoreRemovedAll, responseLoreDoesNotExist;
@@ -39,6 +39,7 @@ public class Main extends JavaPlugin {
 	private void setResponses() {
 		FileConfiguration file = config.getFile();
 		pluginPrefix = Utils.color("" + file.getString("messages.pluginPrefix") + " ");
+		responseWarpUsed = pluginPrefix + Utils.color(file.getString("messages.responseWarpUsed"));
 		responseNoWarpsExist = pluginPrefix + Utils.color(file.getString("messages.responseNoWarpsExist"));
 		responseWarpDoesNotExist = pluginPrefix + Utils.color(file.getString("messages.responseWarpDoesNotExist"));
 		responseWarpCreated = pluginPrefix + Utils.color(file.getString("messages.responseWarpCreated"));
