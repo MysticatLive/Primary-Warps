@@ -64,6 +64,8 @@ public class TabCompletion implements TabCompleter, Listener {
 						args[0].equalsIgnoreCase("del") ||
 						args[0].equalsIgnoreCase("setitem") ||
 						args[0].equalsIgnoreCase("getitem") ||
+						args[0].equalsIgnoreCase("setname") ||
+						args[0].equalsIgnoreCase("rename") ||
 						args[0].equalsIgnoreCase("addlore") ||
 						args[0].equalsIgnoreCase("setlore") ||
 						args[0].equalsIgnoreCase("removelore") ||
