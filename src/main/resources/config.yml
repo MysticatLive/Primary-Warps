@@ -3,6 +3,7 @@ inv-menu:
   default-item: 'OAK_PLANKS'
 
 messages:
+  pluginPrefix: '&f[&b&lPW&f]'
   responseNoWarpsExist: '&e&l(!) &eNo warps currently exist.'
   responseWarpDoesNotExist: '&e&l(!) &eNo warp named &b&o<warp> &eexists.'
   responseWarpCreated: 'Warp &b&o<warp> &fhas been created!'
