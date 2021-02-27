@@ -76,7 +76,7 @@ public class TabCompletion implements TabCompleter, Listener {
 			else if (args.length == 3 &&
 					args[0].equalsIgnoreCase("setname") ||
 					args[0].equalsIgnoreCase("rename")
-			) tab.add("<display name>");
+			) tab.add("[display name]");
 			else if (args.length == 3 && (
 						args[0].equalsIgnoreCase("removelore") ||
 						args[0].equalsIgnoreCase("deletelore") ||

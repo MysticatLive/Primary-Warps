@@ -131,7 +131,7 @@ public class WarpCommand implements CommandExecutor {
 			if (!validWarpName(name)) p.sendMessage(Main.responseWarpInvalidName.replace("<warp>", name));
 			else if (!(Warp.warpExists(newName))) {
 				Warp.setWarpName(name, newName);
-				p.sendMessage(Main.responseWarpRenamed.replace("<warp>", name).replace("<name>", newName));
+				p.sendMessage(Main.responseWarpRenamed.replace("<warp>", name).replace("<name>", Utils.color(newName)));
 			}
 			else p.sendMessage(Main.responseWarpAlreadyExists.replace("<warp>", name));
 		}
@@ -147,7 +147,7 @@ public class WarpCommand implements CommandExecutor {
 				numLore = Objects.requireNonNull(data.getConfigurationSection("warps." + name + ".item.lore")).getKeys(false).size();
 			data.set("warps." + name + ".item.lore." + numLore, s);
 			Main.warps.saveFile();
-			p.sendMessage(Utils.color(Main.responseLoreAdded.replace("<warp>", name).replace("<lore>", s)));
+			p.sendMessage(Utils.color(Main.responseLoreAdded.replace("<warp>", name).replace("<lore>", Utils.color(s))));
 		}
 		else p.sendMessage(Main.responseWarpDoesNotExist.replace("<warp>", name));
 	}
@@ -160,7 +160,7 @@ public class WarpCommand implements CommandExecutor {
 			if (data.contains("warps." + name + ".item.lore." + realLine)) {
 				data.set("warps." + name + ".item.lore." + realLine, s);
 				Main.warps.saveFile();
-				p.sendMessage(Utils.color(Main.responseLoreSet.replace("<warp>", name).replace("<lore>", s).replace("<line>", line)));
+				p.sendMessage(Utils.color(Main.responseLoreSet.replace("<warp>", name).replace("<lore>", Utils.color(s)).replace("<line>", line)));
 			}
 			else p.sendMessage(Utils.color(Main.responseLoreDoesNotExist.replace("<warp>", name).replace("<line>", line)));
 		}
